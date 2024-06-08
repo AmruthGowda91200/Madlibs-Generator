@@ -1,0 +1,109 @@
+# Open the file "story.txt" in read mode and read its contents into the variable 'story'
+with open("story.txt", "r") as f:
+    story = f.read()
+
+# Print the initial story (optional)
+# print(story)
+
+# Initialize an empty set to store unique placeholders found in the story
+words = set()
+
+# Variable to track the start index of a placeholder
+start_of_word = -1
+
+# Define the characters that indicate the start and end of a placeholder
+target_start = "<"
+target_end = ">"
+
+# Iterate over each character in the story along with its index
+for i, char in enumerate(story):
+    # When the start character '<' is found, mark the start index of the placeholder
+    if char == target_start:
+        start_of_word = i
+
+    # When the end character '>' is found and a start has been marked
+    if char == target_end and start_of_word != -1:
+        # Extract the placeholder including '<' and '>'
+        word = story[start_of_word:i+1]
+        # Add the placeholder to the set of words
+        words.add(word)
+        # Reset the start index to indicate the end of the current placeholder
+        start_of_word = -1
+
+# Print the set of unique placeholders found (optional)
+# print(words)
+
+# Initialize an empty dictionary to store user inputs for each placeholder
+answers = {}
+
+# Iterate over each unique placeholder
+for word in words:
+    # Prompt the user to enter a word for each placeholder
+    answer = input("Enter a word for " + word + ": ")
+    # Store the user's input in the dictionary, keyed by the placeholder
+    answers[word] = answer
+
+# Print the dictionary of user inputs (optional)
+# print(answers)
+
+# Iterate over each placeholder in the set of words
+for word in words:
+    # Replace all occurrences of the placeholder in the story with the user's input
+    story = story.replace(word, answers[word])
+
+# Print the modified story with placeholders replaced by user inputs
+print(story)
+
+
+================ How the Code Works =============
+
+Reading the Story from File:
+
+
+with open("story.txt", "r") as f:
+    story = f.read()
+Opens story.txt for reading.
+Reads the entire content into the story variable.
+Closes the file automatically after reading.
+Finding Placeholders:
+
+
+words = set()
+start_of_word = -1
+target_start = "<"
+target_end = ">"
+
+for i, char in enumerate(story):
+    if char == target_start:
+        start_of_word = i
+
+    if char == target_end and start_of_word != -1:
+        word = story[start_of_word:i+1]
+        words.add(word)
+        start_of_word = -1
+Initializes an empty set words to store unique placeholders.
+Uses start_of_word to track the start index of placeholders.
+Loops through each character in story:
+Marks the start index when < is found.
+Extracts the word from start_of_word to i when > is found and adds it to words.
+Prompting User for Inputs:
+
+
+answers = {}
+
+for word in words:
+    answer = input("Enter a word for " + word + ": ")
+    answers[word] = answer
+Initializes an empty dictionary answers to store user inputs.
+Prompts the user for input corresponding to each placeholder in words.
+Stores the user input in answers with the placeholder as the key.
+Replacing Placeholders with User Inputs:
+
+
+for word in words:
+    story = story.replace(word, answers[word])
+
+print(story)
+Iterates over each placeholder in words.
+Replaces occurrences of each placeholder in story with the corresponding user input from answers.
+Prints the final modified story.

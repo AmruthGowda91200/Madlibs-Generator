@@ -1,0 +1,62 @@
+Example 1:
+
+User inputs:
+
+Enter a word for <place>: Wonderland
+Enter a word for <adjective>: magical
+Enter a word for <noun>: explorer
+Enter a word for <name>: Alice
+Enter a word for <fantasy_place>: Enchanted Forest
+Enter a word for <object>: map
+Enter a word for <creature>: dragon
+Enter a word for <number>: three
+Enter a word for <body_part_plural>: wings
+Enter a word for <creature_name>: Draco
+Enter a word for <structure>: cave
+Enter a word for <color>: golden
+Enter a word for <verb>: dance
+Enter a word for <magic_phrase>: abracadabra
+Enter a word for <emotion>: joy
+
+
+Resulting story:
+
+The Enchanted Forest
+
+In the land of Wonderland, a magical explorer named Alice decided to explore the magical Enchanted Forest. With a magical map and a magical explorer, Alice ventured into the magical forest.
+
+Soon, they met a magical dragon with three wings, named Draco. The dragon guided Alice to a hidden cave behind an explorer.
+
+Inside, they found a magical map that glowed golden. To unlock its power, Alice had to dance and say "abracadabra." Instantly, the map granted them joy and a lifetime of explorer.
+
+
+Example 2:
+
+User inputs:
+
+Enter a word for <place>: Atlantis
+Enter a word for <adjective>: adventurous
+Enter a word for <noun>: hero
+Enter a word for <name>: Bob
+Enter a word for <fantasy_place>: Mystic Woods
+Enter a word for <object>: compass
+Enter a word for <creature>: unicorn
+Enter a word for <number>: two
+Enter a word for <body_part_plural>: hooves
+Enter a word for <creature_name>: Sparkle
+Enter a word for <structure>: fortress
+Enter a word for <color>: blue
+Enter a word for <verb>: leap
+Enter a word for <magic_phrase>: presto change-o
+Enter a word for <emotion>: excitement
+
+
+Resulting story:
+
+The Enchanted Forest
+
+In the land of Atlantis, an adventurous hero named Bob decided to explore the adventurous Mystic Woods. With an adventurous compass and an adventurous hero, Bob ventured into the adventurous forest.
+
+Soon, they met an adventurous unicorn with two hooves, named Sparkle. The unicorn guided Bob to a hidden fortress behind a hero.
+
+Inside, they found an adventurous compass that glowed blue. To unlock its power, Bob had to leap and say "presto change-o." Instantly, the compass granted them excitement and a lifetime of hero.
